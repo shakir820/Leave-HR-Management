@@ -1,0 +1,149 @@
+E:\Github\WebApplications\Leave HR Management\Leave HR Management\bin\Debug\netcoreapp3.1\appsettings.Development.json
+E:\Github\WebApplications\Leave HR Management\Leave HR Management\bin\Debug\netcoreapp3.1\appsettings.json
+E:\Github\WebApplications\Leave HR Management\Leave HR Management\bin\Debug\netcoreapp3.1\Properties\launchSettings.json
+E:\Github\WebApplications\Leave HR Management\Leave HR Management\bin\Debug\netcoreapp3.1\Leave HR Management.exe
+E:\Github\WebApplications\Leave HR Management\Leave HR Management\bin\Debug\netcoreapp3.1\Leave HR Management.deps.json
+E:\Github\WebApplications\Leave HR Management\Leave HR Management\bin\Debug\netcoreapp3.1\Leave HR Management.runtimeconfig.json
+E:\Github\WebApplications\Leave HR Management\Leave HR Management\bin\Debug\netcoreapp3.1\Leave HR Management.runtimeconfig.dev.json
+E:\Github\WebApplications\Leave HR Management\Leave HR Management\bin\Debug\netcoreapp3.1\Leave HR Management.dll
+E:\Github\WebApplications\Leave HR Management\Leave HR Management\bin\Debug\netcoreapp3.1\Leave HR Management.pdb
+E:\Github\WebApplications\Leave HR Management\Leave HR Management\bin\Debug\netcoreapp3.1\Leave HR Management.Views.dll
+E:\Github\WebApplications\Leave HR Management\Leave HR Management\bin\Debug\netcoreapp3.1\Leave HR Management.Views.pdb
+E:\Github\WebApplications\Leave HR Management\Leave HR Management\obj\Debug\netcoreapp3.1\Leave HR Management.csprojAssemblyReference.cache
+E:\Github\WebApplications\Leave HR Management\Leave HR Management\obj\Debug\netcoreapp3.1\staticwebassets\Leave HR Management.StaticWebAssets.Manifest.cache
+E:\Github\WebApplications\Leave HR Management\Leave HR Management\obj\Debug\netcoreapp3.1\staticwebassets\Leave HR Management.StaticWebAssets.xml
+E:\Github\WebApplications\Leave HR Management\Leave HR Management\obj\Debug\netcoreapp3.1\Leave HR Management.RazorAssemblyInfo.cache
+E:\Github\WebApplications\Leave HR Management\Leave HR Management\obj\Debug\netcoreapp3.1\Leave HR Management.RazorAssemblyInfo.cs
+E:\Github\WebApplications\Leave HR Management\Leave HR Management\obj\Debug\netcoreapp3.1\Leave HR Management.AssemblyInfoInputs.cache
+E:\Github\WebApplications\Leave HR Management\Leave HR Management\obj\Debug\netcoreapp3.1\Leave HR Management.AssemblyInfo.cs
+E:\Github\WebApplications\Leave HR Management\Leave HR Management\obj\Debug\netcoreapp3.1\Leave HR Management.TagHelpers.input.cache
+E:\Github\WebApplications\Leave HR Management\Leave HR Management\obj\Debug\netcoreapp3.1\Leave HR Management.TagHelpers.output.cache
+E:\Github\WebApplications\Leave HR Management\Leave HR Management\obj\Debug\netcoreapp3.1\Leave HR Management.RazorCoreGenerate.cache
+E:\Github\WebApplications\Leave HR Management\Leave HR Management\obj\Debug\netcoreapp3.1\Razor\Views\Home\Index.cshtml.g.cs
+E:\Github\WebApplications\Leave HR Management\Leave HR Management\obj\Debug\netcoreapp3.1\Razor\Views\Home\Privacy.cshtml.g.cs
+E:\Github\WebApplications\Leave HR Management\Leave HR Management\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Error.cshtml.g.cs
+E:\Github\WebApplications\Leave HR Management\Leave HR Management\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_Layout.cshtml.g.cs
+E:\Github\WebApplications\Leave HR Management\Leave HR Management\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_ValidationScriptsPartial.cshtml.g.cs
+E:\Github\WebApplications\Leave HR Management\Leave HR Management\obj\Debug\netcoreapp3.1\Razor\Views\_ViewImports.cshtml.g.cs
+E:\Github\WebApplications\Leave HR Management\Leave HR Management\obj\Debug\netcoreapp3.1\Razor\Views\_ViewStart.cshtml.g.cs
+E:\Github\WebApplications\Leave HR Management\Leave HR Management\obj\Debug\netcoreapp3.1\Leave HR Management.RazorTargetAssemblyInfo.cache
+E:\Github\WebApplications\Leave HR Management\Leave HR Management\obj\Debug\netcoreapp3.1\Leave HR Management.RazorTargetAssemblyInfo.cs
+E:\Github\WebApplications\Leave HR Management\Leave HR Management\obj\Debug\netcoreapp3.1\Leave HR Management.Views.pdb
+E:\Github\WebApplications\Leave HR Management\Leave HR Management\obj\Debug\netcoreapp3.1\Leave HR Management.dll
+E:\Github\WebApplications\Leave HR Management\Leave HR Management\obj\Debug\netcoreapp3.1\Leave HR Management.pdb
+E:\Github\WebApplications\Leave HR Management\Leave HR Management\obj\Debug\netcoreapp3.1\Leave HR Management.csproj.CopyComplete
+E:\Github\WebApplications\Leave HR Management\Leave HR Management\bin\Debug\netcoreapp3.1\Microsoft.Bcl.AsyncInterfaces.dll
+E:\Github\WebApplications\Leave HR Management\Leave HR Management\bin\Debug\netcoreapp3.1\Microsoft.Bcl.HashCode.dll
+E:\Github\WebApplications\Leave HR Management\Leave HR Management\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.dll
+E:\Github\WebApplications\Leave HR Management\Leave HR Management\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Abstractions.dll
+E:\Github\WebApplications\Leave HR Management\Leave HR Management\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Caching.Abstractions.dll
+E:\Github\WebApplications\Leave HR Management\Leave HR Management\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Caching.Memory.dll
+E:\Github\WebApplications\Leave HR Management\Leave HR Management\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.dll
+E:\Github\WebApplications\Leave HR Management\Leave HR Management\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.Abstractions.dll
+E:\Github\WebApplications\Leave HR Management\Leave HR Management\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.Binder.dll
+E:\Github\WebApplications\Leave HR Management\Leave HR Management\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.dll
+E:\Github\WebApplications\Leave HR Management\Leave HR Management\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+E:\Github\WebApplications\Leave HR Management\Leave HR Management\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.dll
+E:\Github\WebApplications\Leave HR Management\Leave HR Management\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.Abstractions.dll
+E:\Github\WebApplications\Leave HR Management\Leave HR Management\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Options.dll
+E:\Github\WebApplications\Leave HR Management\Leave HR Management\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Primitives.dll
+E:\Github\WebApplications\Leave HR Management\Leave HR Management\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Design.dll
+E:\Github\WebApplications\Leave HR Management\Leave HR Management\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Relational.dll
+E:\Github\WebApplications\Leave HR Management\Leave HR Management\bin\Debug\netcoreapp3.1\Microsoft.Data.Sqlite.dll
+E:\Github\WebApplications\Leave HR Management\Leave HR Management\bin\Debug\netcoreapp3.1\Microsoft.DotNet.PlatformAbstractions.dll
+E:\Github\WebApplications\Leave HR Management\Leave HR Management\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Sqlite.dll
+E:\Github\WebApplications\Leave HR Management\Leave HR Management\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyModel.dll
+E:\Github\WebApplications\Leave HR Management\Leave HR Management\bin\Debug\netcoreapp3.1\SQLitePCLRaw.batteries_v2.dll
+E:\Github\WebApplications\Leave HR Management\Leave HR Management\bin\Debug\netcoreapp3.1\SQLitePCLRaw.nativelibrary.dll
+E:\Github\WebApplications\Leave HR Management\Leave HR Management\bin\Debug\netcoreapp3.1\SQLitePCLRaw.core.dll
+E:\Github\WebApplications\Leave HR Management\Leave HR Management\bin\Debug\netcoreapp3.1\SQLitePCLRaw.provider.dynamic_cdecl.dll
+E:\Github\WebApplications\Leave HR Management\Leave HR Management\bin\Debug\netcoreapp3.1\System.Text.Json.dll
+E:\Github\WebApplications\Leave HR Management\Leave HR Management\bin\Debug\netcoreapp3.1\runtimes\alpine-x64\native\libe_sqlite3.so
+E:\Github\WebApplications\Leave HR Management\Leave HR Management\bin\Debug\netcoreapp3.1\runtimes\linux-arm\native\libe_sqlite3.so
+E:\Github\WebApplications\Leave HR Management\Leave HR Management\bin\Debug\netcoreapp3.1\runtimes\linux-arm64\native\libe_sqlite3.so
+E:\Github\WebApplications\Leave HR Management\Leave HR Management\bin\Debug\netcoreapp3.1\runtimes\linux-armel\native\libe_sqlite3.so
+E:\Github\WebApplications\Leave HR Management\Leave HR Management\bin\Debug\netcoreapp3.1\runtimes\linux-musl-x64\native\libe_sqlite3.so
+E:\Github\WebApplications\Leave HR Management\Leave HR Management\bin\Debug\netcoreapp3.1\runtimes\linux-x64\native\libe_sqlite3.so
+E:\Github\WebApplications\Leave HR Management\Leave HR Management\bin\Debug\netcoreapp3.1\runtimes\linux-x86\native\libe_sqlite3.so
+E:\Github\WebApplications\Leave HR Management\Leave HR Management\bin\Debug\netcoreapp3.1\runtimes\osx-x64\native\libe_sqlite3.dylib
+E:\Github\WebApplications\Leave HR Management\Leave HR Management\bin\Debug\netcoreapp3.1\runtimes\win-arm\native\e_sqlite3.dll
+E:\Github\WebApplications\Leave HR Management\Leave HR Management\bin\Debug\netcoreapp3.1\runtimes\win-arm64\native\e_sqlite3.dll
+E:\Github\WebApplications\Leave HR Management\Leave HR Management\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\e_sqlite3.dll
+E:\Github\WebApplications\Leave HR Management\Leave HR Management\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\e_sqlite3.dll
+E:\Github\WebApplications\Leave HR Management\Leave HR Management\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Razor.Language.dll
+E:\Github\WebApplications\Leave HR Management\Leave HR Management\bin\Debug\netcoreapp3.1\Microsoft.CodeAnalysis.dll
+E:\Github\WebApplications\Leave HR Management\Leave HR Management\bin\Debug\netcoreapp3.1\Microsoft.CodeAnalysis.CSharp.dll
+E:\Github\WebApplications\Leave HR Management\Leave HR Management\bin\Debug\netcoreapp3.1\Microsoft.CodeAnalysis.CSharp.Workspaces.dll
+E:\Github\WebApplications\Leave HR Management\Leave HR Management\bin\Debug\netcoreapp3.1\Microsoft.CodeAnalysis.Razor.dll
+E:\Github\WebApplications\Leave HR Management\Leave HR Management\bin\Debug\netcoreapp3.1\Microsoft.CodeAnalysis.Workspaces.dll
+E:\Github\WebApplications\Leave HR Management\Leave HR Management\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.Web.CodeGeneration.dll
+E:\Github\WebApplications\Leave HR Management\Leave HR Management\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.Web.CodeGeneration.Contracts.dll
+E:\Github\WebApplications\Leave HR Management\Leave HR Management\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.Web.CodeGeneration.Core.dll
+E:\Github\WebApplications\Leave HR Management\Leave HR Management\bin\Debug\netcoreapp3.1\dotnet-aspnet-codegenerator-design.dll
+E:\Github\WebApplications\Leave HR Management\Leave HR Management\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.Web.CodeGeneration.EntityFrameworkCore.dll
+E:\Github\WebApplications\Leave HR Management\Leave HR Management\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.Web.CodeGeneration.Templating.dll
+E:\Github\WebApplications\Leave HR Management\Leave HR Management\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.Web.CodeGeneration.Utils.dll
+E:\Github\WebApplications\Leave HR Management\Leave HR Management\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.Web.CodeGenerators.Mvc.dll
+E:\Github\WebApplications\Leave HR Management\Leave HR Management\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+E:\Github\WebApplications\Leave HR Management\Leave HR Management\bin\Debug\netcoreapp3.1\NuGet.Frameworks.dll
+E:\Github\WebApplications\Leave HR Management\Leave HR Management\bin\Debug\netcoreapp3.1\System.Composition.AttributedModel.dll
+E:\Github\WebApplications\Leave HR Management\Leave HR Management\bin\Debug\netcoreapp3.1\System.Composition.Convention.dll
+E:\Github\WebApplications\Leave HR Management\Leave HR Management\bin\Debug\netcoreapp3.1\System.Composition.Hosting.dll
+E:\Github\WebApplications\Leave HR Management\Leave HR Management\bin\Debug\netcoreapp3.1\System.Composition.Runtime.dll
+E:\Github\WebApplications\Leave HR Management\Leave HR Management\bin\Debug\netcoreapp3.1\System.Composition.TypedParts.dll
+E:\Github\WebApplications\Leave HR Management\Leave HR Management\bin\Debug\netcoreapp3.1\cs\Microsoft.CodeAnalysis.resources.dll
+E:\Github\WebApplications\Leave HR Management\Leave HR Management\bin\Debug\netcoreapp3.1\de\Microsoft.CodeAnalysis.resources.dll
+E:\Github\WebApplications\Leave HR Management\Leave HR Management\bin\Debug\netcoreapp3.1\es\Microsoft.CodeAnalysis.resources.dll
+E:\Github\WebApplications\Leave HR Management\Leave HR Management\bin\Debug\netcoreapp3.1\fr\Microsoft.CodeAnalysis.resources.dll
+E:\Github\WebApplications\Leave HR Management\Leave HR Management\bin\Debug\netcoreapp3.1\it\Microsoft.CodeAnalysis.resources.dll
+E:\Github\WebApplications\Leave HR Management\Leave HR Management\bin\Debug\netcoreapp3.1\ja\Microsoft.CodeAnalysis.resources.dll
+E:\Github\WebApplications\Leave HR Management\Leave HR Management\bin\Debug\netcoreapp3.1\ko\Microsoft.CodeAnalysis.resources.dll
+E:\Github\WebApplications\Leave HR Management\Leave HR Management\bin\Debug\netcoreapp3.1\pl\Microsoft.CodeAnalysis.resources.dll
+E:\Github\WebApplications\Leave HR Management\Leave HR Management\bin\Debug\netcoreapp3.1\pt-BR\Microsoft.CodeAnalysis.resources.dll
+E:\Github\WebApplications\Leave HR Management\Leave HR Management\bin\Debug\netcoreapp3.1\ru\Microsoft.CodeAnalysis.resources.dll
+E:\Github\WebApplications\Leave HR Management\Leave HR Management\bin\Debug\netcoreapp3.1\tr\Microsoft.CodeAnalysis.resources.dll
+E:\Github\WebApplications\Leave HR Management\Leave HR Management\bin\Debug\netcoreapp3.1\zh-Hans\Microsoft.CodeAnalysis.resources.dll
+E:\Github\WebApplications\Leave HR Management\Leave HR Management\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.CodeAnalysis.resources.dll
+E:\Github\WebApplications\Leave HR Management\Leave HR Management\bin\Debug\netcoreapp3.1\cs\Microsoft.CodeAnalysis.CSharp.resources.dll
+E:\Github\WebApplications\Leave HR Management\Leave HR Management\bin\Debug\netcoreapp3.1\de\Microsoft.CodeAnalysis.CSharp.resources.dll
+E:\Github\WebApplications\Leave HR Management\Leave HR Management\bin\Debug\netcoreapp3.1\es\Microsoft.CodeAnalysis.CSharp.resources.dll
+E:\Github\WebApplications\Leave HR Management\Leave HR Management\bin\Debug\netcoreapp3.1\fr\Microsoft.CodeAnalysis.CSharp.resources.dll
+E:\Github\WebApplications\Leave HR Management\Leave HR Management\bin\Debug\netcoreapp3.1\it\Microsoft.CodeAnalysis.CSharp.resources.dll
+E:\Github\WebApplications\Leave HR Management\Leave HR Management\bin\Debug\netcoreapp3.1\ja\Microsoft.CodeAnalysis.CSharp.resources.dll
+E:\Github\WebApplications\Leave HR Management\Leave HR Management\bin\Debug\netcoreapp3.1\ko\Microsoft.CodeAnalysis.CSharp.resources.dll
+E:\Github\WebApplications\Leave HR Management\Leave HR Management\bin\Debug\netcoreapp3.1\pl\Microsoft.CodeAnalysis.CSharp.resources.dll
+E:\Github\WebApplications\Leave HR Management\Leave HR Management\bin\Debug\netcoreapp3.1\pt-BR\Microsoft.CodeAnalysis.CSharp.resources.dll
+E:\Github\WebApplications\Leave HR Management\Leave HR Management\bin\Debug\netcoreapp3.1\ru\Microsoft.CodeAnalysis.CSharp.resources.dll
+E:\Github\WebApplications\Leave HR Management\Leave HR Management\bin\Debug\netcoreapp3.1\tr\Microsoft.CodeAnalysis.CSharp.resources.dll
+E:\Github\WebApplications\Leave HR Management\Leave HR Management\bin\Debug\netcoreapp3.1\zh-Hans\Microsoft.CodeAnalysis.CSharp.resources.dll
+E:\Github\WebApplications\Leave HR Management\Leave HR Management\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.CodeAnalysis.CSharp.resources.dll
+E:\Github\WebApplications\Leave HR Management\Leave HR Management\bin\Debug\netcoreapp3.1\cs\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+E:\Github\WebApplications\Leave HR Management\Leave HR Management\bin\Debug\netcoreapp3.1\de\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+E:\Github\WebApplications\Leave HR Management\Leave HR Management\bin\Debug\netcoreapp3.1\es\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+E:\Github\WebApplications\Leave HR Management\Leave HR Management\bin\Debug\netcoreapp3.1\fr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+E:\Github\WebApplications\Leave HR Management\Leave HR Management\bin\Debug\netcoreapp3.1\it\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+E:\Github\WebApplications\Leave HR Management\Leave HR Management\bin\Debug\netcoreapp3.1\ja\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+E:\Github\WebApplications\Leave HR Management\Leave HR Management\bin\Debug\netcoreapp3.1\ko\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+E:\Github\WebApplications\Leave HR Management\Leave HR Management\bin\Debug\netcoreapp3.1\pl\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+E:\Github\WebApplications\Leave HR Management\Leave HR Management\bin\Debug\netcoreapp3.1\pt-BR\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+E:\Github\WebApplications\Leave HR Management\Leave HR Management\bin\Debug\netcoreapp3.1\ru\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+E:\Github\WebApplications\Leave HR Management\Leave HR Management\bin\Debug\netcoreapp3.1\tr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+E:\Github\WebApplications\Leave HR Management\Leave HR Management\bin\Debug\netcoreapp3.1\zh-Hans\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+E:\Github\WebApplications\Leave HR Management\Leave HR Management\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+E:\Github\WebApplications\Leave HR Management\Leave HR Management\bin\Debug\netcoreapp3.1\cs\Microsoft.CodeAnalysis.Workspaces.resources.dll
+E:\Github\WebApplications\Leave HR Management\Leave HR Management\bin\Debug\netcoreapp3.1\de\Microsoft.CodeAnalysis.Workspaces.resources.dll
+E:\Github\WebApplications\Leave HR Management\Leave HR Management\bin\Debug\netcoreapp3.1\es\Microsoft.CodeAnalysis.Workspaces.resources.dll
+E:\Github\WebApplications\Leave HR Management\Leave HR Management\bin\Debug\netcoreapp3.1\fr\Microsoft.CodeAnalysis.Workspaces.resources.dll
+E:\Github\WebApplications\Leave HR Management\Leave HR Management\bin\Debug\netcoreapp3.1\it\Microsoft.CodeAnalysis.Workspaces.resources.dll
+E:\Github\WebApplications\Leave HR Management\Leave HR Management\bin\Debug\netcoreapp3.1\ja\Microsoft.CodeAnalysis.Workspaces.resources.dll
+E:\Github\WebApplications\Leave HR Management\Leave HR Management\bin\Debug\netcoreapp3.1\ko\Microsoft.CodeAnalysis.Workspaces.resources.dll
+E:\Github\WebApplications\Leave HR Management\Leave HR Management\bin\Debug\netcoreapp3.1\pl\Microsoft.CodeAnalysis.Workspaces.resources.dll
+E:\Github\WebApplications\Leave HR Management\Leave HR Management\bin\Debug\netcoreapp3.1\pt-BR\Microsoft.CodeAnalysis.Workspaces.resources.dll
+E:\Github\WebApplications\Leave HR Management\Leave HR Management\bin\Debug\netcoreapp3.1\ru\Microsoft.CodeAnalysis.Workspaces.resources.dll
+E:\Github\WebApplications\Leave HR Management\Leave HR Management\bin\Debug\netcoreapp3.1\tr\Microsoft.CodeAnalysis.Workspaces.resources.dll
+E:\Github\WebApplications\Leave HR Management\Leave HR Management\bin\Debug\netcoreapp3.1\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll
+E:\Github\WebApplications\Leave HR Management\Leave HR Management\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
+E:\Github\WebApplications\Leave HR Management\Leave HR Management\obj\Debug\netcoreapp3.1\Leave HR Management.MvcApplicationPartsAssemblyInfo.cache
+E:\Github\WebApplications\Leave HR Management\Leave HR Management\obj\Debug\netcoreapp3.1\Razor\Views\Login\Index.cshtml.g.cs
+E:\Github\WebApplications\Leave HR Management\Leave HR Management\obj\Debug\netcoreapp3.1\Razor\Views\Login\Registration.cshtml.g.cs
+E:\Github\WebApplications\Leave HR Management\Leave HR Management\obj\Debug\netcoreapp3.1\Razor\Views\Employee\Index.cshtml.g.cs
