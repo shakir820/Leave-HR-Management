@@ -3,14 +3,16 @@ using System;
 using Leave_HR_Management.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace Leave_HR_Management.Migrations
 {
     [DbContext(typeof(AbcContext))]
-    partial class AbcContextModelSnapshot : ModelSnapshot
+    [Migration("20200228184852_InitialCreated")]
+    partial class InitialCreated
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

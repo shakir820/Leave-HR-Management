@@ -9,13 +9,17 @@ namespace Leave_HR_Management.Models
     public class Department
     {
         public long Id { get; set; }
+        public DepartmentCatagory Catagory { get; set; }
         public string Name { get; set; }
+    }
 
-        //public bool? IsPrimary { get; set; }
 
-        [InverseProperty("PrimaryDepartment")]
-        public List<Employee> Employees { get; set; }
-
-        public List<LeaveApprover> LeaveApprovers { get; set; }
+    public enum DepartmentCatagory
+    {
+        HR = 1,
+        IT = 2,
+        Creative = 3,
+        Marketing = 4,
+        Sales = 5
     }
 }

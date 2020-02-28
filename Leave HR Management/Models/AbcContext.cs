@@ -8,6 +8,8 @@ namespace Leave_HR_Management.Models
 {
     public class AbcContext:DbContext
     {
+      
+
         public DbSet<Employee> Employees { get; set; }
         public DbSet<Department> Departments { get; set; }
         public DbSet<LeaveApprover> LeaveApprovers { get; set; }

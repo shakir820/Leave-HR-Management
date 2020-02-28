@@ -1,8 +1,97 @@
-﻿@{
+﻿@model IEnumerable<EmployeeVM>
+
+
+@{
     ViewData["Title"] = "Home Page";
 }
 
 <div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    <h1 class="display-4">Employee List</h1>
+
 </div>
+
+
+
+
+<div class="card shadow mb-4">
+    <div class="card-header py-3">
+        <h6 class="m-0 font-weight-bold text-primary">DataTables Example</h6>
+    </div>
+    <div class="card-body">
+        <div class="table-responsive">
+            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Gender</th>
+                        <th>Employee Role</th>
+                        <th>Departments</th>
+                        <th>Leave Approvers</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @if (Model != null)
+                    {
+                        if (Model.Count() > 0)
+                        {
+                            foreach (var employee in Model)
+                            {
+                    <tr>
+                        <td>@employee.FullName</td>
+                        <td>@employee.Gender</td>
+                        <td>@employee.EmployeeRole</td>
+
+                        <td>
+                            @{ string departmentsStr = "";}
+                            @if (employee.Departments.Count > 0)
+                            {
+                                var i = 0;
+                                foreach (var department in employee.Departments)
+                                {
+                                    if (i != 0)
+                                    {
+                                        departmentsStr += ", ";
+                                    }
+                                    departmentsStr += department.Catagory;
+
+                                    i++;
+                                }
+                                <p class="text-wrap">@departmentsStr</p>
+                            }
+
+                        </td>
+
+                        <td>
+                            @{ string approversStr = "";}
+                            @if (employee.LeaveApprovers.Count > 0)
+                            {
+                                foreach (var approver in employee.LeaveApprovers)
+                                {
+                                    approversStr += ", " + approver.Name;
+                                }
+                                <p class="text-wrap">@approversStr</p>
+                            }
+                        </td>
+
+                        <td>
+                            <a class="btn btn-sm btn-outline-primary" asp-action="SetLeaveApprover" asp-controller="Home" asp-route-id="@employee.Id">Set Approver</a>
+                        </td>
+
+                    </tr>
+                            }
+                        }
+                    }
+
+
+                
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+
+
+

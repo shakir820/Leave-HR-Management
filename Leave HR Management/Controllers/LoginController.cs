@@ -30,6 +30,7 @@ namespace Leave_HR_Management.Controllers
 
 
 
+        [HttpPost]
         public IActionResult LoginUser(Employee employee)
         {
             using (var db = new AbcContext())

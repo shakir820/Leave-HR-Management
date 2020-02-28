@@ -1,0 +1,323 @@
+﻿@model EmployeeVM
+@{
+    ViewData["Title"] = "SetLeaveApprover";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div><h4>Set Leave Approver for</h4> <h3><b>@Model.FullName</b> </h3></div>
+<hr />
+
+
+<form action="/" method="post">
+    <div class="form-group row">
+        <label for="LevelSelectDropDown" class="font-weight-bold col-sm-2 col-form-label">Select Level</label>
+        <div class="col-sm-10">
+            <select id="LevelSelectDropDown" class="form-control" onchange="LevelChanged()">
+                <option value="-1" selected>Select</option>
+                <option value="0">Company</option>
+                <option value="1">Department</option>
+                <option value="2">Employee</option>
+            </select>
+        </div>
+    </div>
+
+    <div class="form-group row" id="SecondDropdownGroup">
+        <label for="LevelSelectDropDown" class="font-weight-bold col-sm-2 col-form-label">Department/ Employee</label>
+        <div class="col-sm-10">
+            <select id="EmployeeAndDepartmentSelectDropDown" class="form-control" onchange="DepartmentChanged()">
+                <option>Select Department</option>
+            </select>
+        </div>
+    </div>
+</form>
+
+
+
+<div class="table-responsive">
+    <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Gender</th>
+                <th>Level</th>
+                <th>Departments</th>
+                <th>Set Approver</th>
+            </tr>
+        </thead>
+        <tbody id="EmployeeTableBody">
+            @*@for (var i = 0; i < 10; i++)
+                {
+                    <tr>
+                        <td>Shakir Ahmed</td>
+                        <td>Male</td>
+                        <td>Company</td>
+                        <td>IT Department</td>
+                        <td>
+                            <div class="">
+                                <input class="d-inline" type="checkbox"/>
+                                <div class="d-inline">Set Approver</div>
+                            </div>
+                        </td>
+                    </tr>
+                }*@
+        </tbody>
+    </table>
+</div>
+
+<div style="margin-bottom:100px;">
+    <button class="btn btn-primary btn-icon-split btn-sm float-right" style="width:80px;" onclick="">Save</button>
+</div>
+
+
+
+
+<script type="text/javascript">
+
+
+    $(document).ready(function () {
+                   $("#SecondDropdownGroup").hide();
+    })
+
+
+
+
+    function LevelChanged() {
+        console.log("selectChanged");
+
+        var selectedLevel = $("#LevelSelectDropDown").val();
+        if (selectedLevel == 0 || selectedLevel == -1 || selectedLevel == 2) {
+            $("#SecondDropdownGroup").hide();
+        }
+        else {
+            $("#SecondDropdownGroup").show();
+        }
+
+        $('#EmployeeAndDepartmentSelectDropDown').empty();
+        if (selectedLevel == 1) {
+            $('#EmployeeAndDepartmentSelectDropDown').append('<option selected value="0">--- Select ---</option>');
+            $('#EmployeeAndDepartmentSelectDropDown').append('<option value="1">HR</option>');
+            $('#EmployeeAndDepartmentSelectDropDown').append('<option value="2">IT</option>');
+            $('#EmployeeAndDepartmentSelectDropDown').append('<option value="3">Creative</option>');
+            $('#EmployeeAndDepartmentSelectDropDown').append('<option value="4">Marketing</option>');
+            $('#EmployeeAndDepartmentSelectDropDown').append('<option value="5">Sales</option>');
+        }
+
+        $("#EmployeeTableBody").empty();
+        if (selectedLevel == 0) {
+            //$("#EmployeeTableBody").empty();
+            PopulateCompanyEmployees();
+        }
+
+        if (selectedLevel == 2) {
+            //$("#EmployeeTableBody").empty();
+            PopulateEmployees();
+        }
+
+    }
+
+
+
+
+
+
+    function PopulateEmployees() {
+          $.ajax({
+                url: "@Url.Action("GetEmployeesByEmployee", "Home")",
+
+                success: function (result) {
+                    console.log(result);
+                    $.each(result, function (index, employee) {
+                        console.log(employee);
+                        var employeeName = employee.firstName + " " + employee.lastName;
+                        var gender = "";
+                        if (employee.gender == 0) {
+                            gender = "Male";
+                        }
+                        else {
+                            gender = "Female";
+                        }
+
+                        var deparmentsStr = "";
+                        $.each(employee.departments, function (i, dep) {
+                            var name = GetDepartmentName(dep.catagory);
+                            if (i != 0) {
+                                deparmentsStr += ", ";
+                            }
+                            deparmentsStr += name;
+                        });
+
+                        if (employee.isApprover == true) {
+                            $("#EmployeeTableBody").append(
+                                `<tr>
+                                <td>${employeeName}</td>
+                                <td>${gender}</td>
+                                <td>Employee</td>
+                                <td>${deparmentsStr}</td>
+                                <td>
+                                    <div>
+                                        <input class="d-inline" type="checkbox" checked/>
+                                        <div class="d-inline">Set Approver</div>
+                                    </div>
+                                </td>
+                            </tr>`);
+                        }
+                        else {
+                            $("#EmployeeTableBody").append(
+                            `<tr>
+                                <td>${employeeName}</td>
+                                <td>${gender}</td>
+                                <td>Employee</td>
+                                <td>${deparmentsStr}</td>
+                                <td>
+                                    <div>
+                                        <input class="d-inline" type="checkbox" />
+                                        <div class="d-inline">Set Approver</div>
+                                    </div>
+                                </td>
+                            </tr>`);
+                        }
+
+                        });
+                },
+              dataType: "json"
+            });
+    }
+
+
+
+
+
+    function PopulateCompanyEmployees() {
+          $.ajax({
+                url: "@Url.Action("GetEmployeesByCompany", "Home")",
+
+                success: function (result) {
+                    console.log(result);
+                    $.each(result, function (index, employee) {
+                        console.log(employee);
+                        var employeeName = employee.firstName + " " + employee.lastName;
+                        var gender = "";
+                        if (employee.gender == 0) {
+                            gender = "Male";
+                        }
+                        else {
+                            gender = "Female";
+                        }
+
+                        var deparmentsStr = "";
+                        $.each(employee.departments, function (i, dep) {
+                            var name = GetDepartmentName(dep.catagory);
+                            if (i != 0) {
+                                deparmentsStr += ", ";
+                            }
+                            deparmentsStr += name;
+                        });
+
+                        if (employee.isApprover == true) {
+                            $("#EmployeeTableBody").append(
+                                `<tr>
+                                <td>${employeeName}</td>
+                                <td>${gender}</td>
+                                <td>Company</td>
+                                <td>${deparmentsStr}</td>
+                                <td>
+                                    <div>
+                                        <input class="d-inline" type="checkbox" checked/>
+                                        <div class="d-inline">Set Approver</div>
+                                    </div>
+                                </td>
+                            </tr>`);
+                        }
+                        else {
+                            $("#EmployeeTableBody").append(
+                            `<tr>
+                                <td>${employeeName}</td>
+                                <td>${gender}</td>
+                                <td>Company</td>
+                                <td>${deparmentsStr}</td>
+                                <td>
+                                    <div>
+                                        <input class="d-inline" type="checkbox" />
+                                        <div class="d-inline">Set Approver</div>
+                                    </div>
+                                </td>
+                            </tr>`);
+                        }
+
+                        });
+                },
+              dataType: "json"
+            });
+    }
+
+
+
+
+    function DepartmentChanged() {
+        var selectedLevel = $("#EmployeeAndDepartmentSelectDropDown").val();
+         $("#EmployeeTableBody").empty();
+        if (selectedLevel != 0) {
+               $.ajax({
+                   url: "@Url.Action("GetEmployeesByDepartment", "Home")",
+                   data: { id: selectedLevel },
+                success: function (result) {
+                    console.log(result);
+                    $.each(result, function (index, employee) {
+                        console.log(employee);
+                        var employeeName = employee.firstName + " " + employee.lastName;
+                        var gender = "";
+                        if (employee.gender == 0) {
+                            gender = "Male";
+                        }
+                        else {
+                            gender = "Female";
+                        }
+
+                        var deparmentsStr = "";
+                        $.each(employee.departments, function (i, dep) {
+                            var name = GetDepartmentName(dep.catagory);
+                            if (i != 0) {
+                                deparmentsStr += ", ";
+                            }
+                            deparmentsStr += name;
+                        });
+
+                        if (employee.isApprover == true) {
+                            $("#EmployeeTableBody").append(
+                                `<tr>
+                                <td>${employeeName}</td>
+                                <td>${gender}</td>
+                                <td>Company</td>
+                                <td>${deparmentsStr}</td>
+                                <td>
+                                    <div>
+                                        <input class="d-inline" type="checkbox" checked/>
+                                        <div class="d-inline">Set Approver</div>
+                                    </div>
+                                </td>
+                            </tr>`);
+                        }
+                        else {
+                            $("#EmployeeTableBody").append(
+                            `<tr>
+                                <td>${employeeName}</td>
+                                <td>${gender}</td>
+                                <td>Company</td>
+                                <td>${deparmentsStr}</td>
+                                <td>
+                                    <div>
+                                        <input class="d-inline" type="checkbox" />
+                                        <div class="d-inline">Set Approver</div>
+                                    </div>
+                                </td>
+                            </tr>`);
+                        }
+
+                        });
+                },
+              dataType: "json"
+            });
+        }
+
+    }
+</script>
