@@ -15,14 +15,10 @@ namespace Leave_HR_Management.Models
         public Gender Gender { get; set; }
         public string Email { get; set; }
         public string Password { get; set; }
-
         public bool IsApprover { get; set; } = false;
-
         public DepartmentCatagory PrimaryDepartmentCatergory { get; set; }
-
         public List<Department> Departments { get; set; }
         public EmployeeRole EmployeeRole { get; set; }
-        
         public List<LeaveApprover> LeaveApprovers { get; set; }
 
     }

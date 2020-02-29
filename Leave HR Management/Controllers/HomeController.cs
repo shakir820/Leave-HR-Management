@@ -84,7 +84,7 @@ namespace Leave_HR_Management.Controllers
             {
                 return NotFound();
             }
-            var employee = await db.Employees.FindAsync(id);
+            var employee = await db.Employees.Include(a=>a.LeaveApprovers).AsNoTracking().FirstOrDefaultAsync(a=>a.Id == id);
             if(employee == null)
             {
                 return NotFound();
@@ -95,52 +95,66 @@ namespace Leave_HR_Management.Controllers
             Employee.EmployeeRole = employee.EmployeeRole;
             Employee.FullName = employee.FirstName + " " + employee.LastName;
             Employee.PrimaryDepartment = employee.PrimaryDepartmentCatergory;
+            Employee.LeaveApprovers = new List<LeaveApproverVM>();
+            foreach(var item in employee.LeaveApprovers)
+            {
+                Employee.LeaveApprovers.Add(
+                    new LeaveApproverVM
+                    {
+                        Id = item.Id,
+                        Department = item.Department,
+                        EmployeeId = item.EmployeeId,
+                        EmployeeRole = item.EmployeeRole,
+                        Name = item.Name
+                    });
+            }
+
 
             return View(Employee);
         }
 
 
         [HttpPost]
-        public async Task<IActionResult> SetLeaveApproverAsync(SetEmployeeApproverVM formData)
+        public  IActionResult SetLeaveApproverAsync(SetEmployeeApproverVM formData)
         {
             if(formData != null)
             {
                
-                var leaveApprovers = await db.LeaveApprovers.Where(a => a.EmployeeId == formData.EmployeeId).ToListAsync();
-                foreach(var item in leaveApprovers)
-                {
-                    db.LeaveApprovers.Remove(item);
-                    await db.SaveChangesAsync();
-                }
+                //var leaveApprovers = await db.LeaveApprovers.Where(a => a.EmployeeId == formData.EmployeeId).ToListAsync();
+                //foreach(var item in leaveApprovers)
+                //{
+                //    db.LeaveApprovers.Remove(item);
+                //    await db.SaveChangesAsync();
+                //}
 
-                var employee = await db.Employees.Include(a => a.LeaveApprovers).FirstOrDefaultAsync(a=>a.Id == formData.EmployeeId);
+                //var employee = await db.Employees.Include(a => a.LeaveApprovers).FirstOrDefaultAsync(a=>a.Id == formData.EmployeeId);
 
 
 
-                employee.LeaveApprovers.Clear();
-                await db.SaveChangesAsync();
+                //employee.LeaveApprovers.Clear();
+                //await db.SaveChangesAsync();
 
-                if(formData.LeaveApprovers.Count > 0)
-                {
-                    foreach(var item in formData.LeaveApprovers)
-                    {
-                        var leaveApprover = new LeaveApprover();
-                        leaveApprover.Department = GetDepartment(formData.Department);
-                        leaveApprover.EmployeeId = item.EmployeeId;
-                        leaveApprover.EmployeeRole = GetEmployeeRole(formData.EmployeeRole);
-                        leaveApprover.Name = item.Name;
-                        db.LeaveApprovers.Add(leaveApprover);
-                        await db.SaveChangesAsync();
-                        employee.LeaveApprovers.Add(leaveApprover);
-                        if(item.EmployeeId == employee.Id)
-                        {
-                            employee.IsApprover = true;
-                        }
-                        await db.SaveChangesAsync();
-                    }
-                }
+                //if(formData.LeaveApprovers.Count > 0)
+                //{
+                //    foreach(var item in formData.LeaveApprovers)
+                //    {
+                //        var leaveApprover = new LeaveApprover();
+                //        leaveApprover.Department = GetDepartment(formData.Department);
+                //        leaveApprover.EmployeeId = item.EmployeeId;
+                //        leaveApprover.EmployeeRole = GetEmployeeRole(formData.EmployeeRole);
+                //        leaveApprover.Name = item.Name;
+                //        db.LeaveApprovers.Add(leaveApprover);
+                //        await db.SaveChangesAsync();
+                //        employee.LeaveApprovers.Add(leaveApprover);
+                //        if(item.EmployeeId == employee.Id)
+                //        {
+                //            employee.IsApprover = true;
+                //        }
+                //        await db.SaveChangesAsync();
+                //    }
+                //}
 
-                return Json(new { isSuccess = true });
+                //return Json(new { isSuccess = true });
             }
             return Json(new { isSuccess = false });
         }
@@ -195,16 +209,19 @@ namespace Leave_HR_Management.Controllers
             else return DepartmentCatagory.Sales;
         }
 
+
+
         public async Task<IActionResult> GetEmployeesByEmployeeAsync()
         {
-            var employees = await db.Employees.Include(a => a.Departments).Where(a => a.EmployeeRole == EmployeeRole.Employee).ToListAsync();
+            var employees = await db.Employees.Include(a => a.Departments).
+                Where(a => a.EmployeeRole == EmployeeRole.Employee).AsNoTracking().ToListAsync();
             return Json(employees);
         }
 
 
         public async Task<IActionResult> GetEmployeesByDepartment(int id)
         {
-            var employees = await db.Employees.Include(a => a.Departments).ToListAsync();
+            var employees = await db.Employees.Include(a => a.Departments).AsNoTracking().ToListAsync();
             var departmentEmployees = new List<Employee>();
             foreach (var item in employees)
             {
@@ -220,8 +237,22 @@ namespace Leave_HR_Management.Controllers
 
         public async Task<IActionResult> GetEmployeesByCompanyAsync()
         {
-            var employees = await db.Employees.Include(a => a.Departments).Where(a => a.EmployeeRole == EmployeeRole.Company).ToListAsync();
+            var employees = await db.Employees.Include(a => a.Departments).
+                Where(a => a.EmployeeRole == EmployeeRole.Company).AsNoTracking().ToListAsync();
             return Json(employees);
+        }
+
+
+
+
+        public async Task<IActionResult> GetLeaveApproversByEmployee(long id)
+        {
+            var employee = await db.Employees.Include(a => a.LeaveApprovers).AsNoTracking().FirstOrDefaultAsync(a => a.Id == id);
+            if(employee == null)
+            {
+                return null;
+            }
+            return Json(employee.LeaveApprovers);
         }
 
 

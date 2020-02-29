@@ -9,6 +9,7 @@
 
 
 <form action="/" method="post">
+    <input type="hidden" asp-for="Id" id="EmployeeId"  />
     <div class="form-group row">
         <label for="LevelSelectDropDown" class="font-weight-bold col-sm-2 col-form-label">Select Level</label>
         <div class="col-sm-10">
@@ -37,6 +38,7 @@
     <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
         <thead>
             <tr>
+                <th>Id</th>
                 <th>Name</th>
                 <th>Gender</th>
                 <th>Level</th>
@@ -48,6 +50,7 @@
             @*@for (var i = 0; i < 10; i++)
                 {
                     <tr>
+                        <td>id</td>                
                         <td>Shakir Ahmed</td>
                         <td>Male</td>
                         <td>Company</td>
@@ -65,7 +68,7 @@
 </div>
 
 <div style="margin-bottom:100px;">
-    <button class="btn btn-primary btn-icon-split btn-sm float-right" style="width:80px;" onclick="">Save</button>
+    <button class="btn btn-primary btn-icon-split btn-sm float-right" style="width:80px;" onclick="SaveBtnClicked()">Save</button>
 </div>
 
 
@@ -74,15 +77,22 @@
 <script type="text/javascript">
 
 
+
+    @*var ffff = @Model.LeaveApprovers;
+
+    console.log(ffff);*@
+
     $(document).ready(function () {
-                   $("#SecondDropdownGroup").hide();
+        $("#SecondDropdownGroup").hide();
+          
+
     })
 
 
 
 
     function LevelChanged() {
-        console.log("selectChanged");
+       
 
         var selectedLevel = $("#LevelSelectDropDown").val();
         if (selectedLevel == 0 || selectedLevel == -1 || selectedLevel == 2) {
@@ -93,6 +103,7 @@
         }
 
         $('#EmployeeAndDepartmentSelectDropDown').empty();
+
         if (selectedLevel == 1) {
             $('#EmployeeAndDepartmentSelectDropDown').append('<option selected value="0">--- Select ---</option>');
             $('#EmployeeAndDepartmentSelectDropDown').append('<option value="1">HR</option>');
@@ -103,6 +114,7 @@
         }
 
         $("#EmployeeTableBody").empty();
+
         if (selectedLevel == 0) {
             //$("#EmployeeTableBody").empty();
             PopulateCompanyEmployees();
@@ -125,9 +137,11 @@
                 url: "@Url.Action("GetEmployeesByEmployee", "Home")",
 
                 success: function (result) {
-                    console.log(result);
+                  
+                    var employeeId = $("#EmployeeId").val();
+                    //var leaveApprovers = GetEmployeeLeaveApprovers(employeeId);
                     $.each(result, function (index, employee) {
-                        console.log(employee);
+                       
                         var employeeName = employee.firstName + " " + employee.lastName;
                         var gender = "";
                         if (employee.gender == 0) {
@@ -146,9 +160,13 @@
                             deparmentsStr += name;
                         });
 
+
+
                         if (employee.isApprover == true) {
+                            
                             $("#EmployeeTableBody").append(
                                 `<tr>
+                                <td>${employee.id}</td>
                                 <td>${employeeName}</td>
                                 <td>${gender}</td>
                                 <td>Employee</td>
@@ -164,6 +182,7 @@
                         else {
                             $("#EmployeeTableBody").append(
                             `<tr>
+                                <td>${employee.id}</td>
                                 <td>${employeeName}</td>
                                 <td>${gender}</td>
                                 <td>Employee</td>
@@ -192,9 +211,9 @@
                 url: "@Url.Action("GetEmployeesByCompany", "Home")",
 
                 success: function (result) {
-                    console.log(result);
+                    
                     $.each(result, function (index, employee) {
-                        console.log(employee);
+                      
                         var employeeName = employee.firstName + " " + employee.lastName;
                         var gender = "";
                         if (employee.gender == 0) {
@@ -216,6 +235,7 @@
                         if (employee.isApprover == true) {
                             $("#EmployeeTableBody").append(
                                 `<tr>
+                                <td>${employee.id}</td>
                                 <td>${employeeName}</td>
                                 <td>${gender}</td>
                                 <td>Company</td>
@@ -231,6 +251,7 @@
                         else {
                             $("#EmployeeTableBody").append(
                             `<tr>
+                                <td>${employee.id}</td>
                                 <td>${employeeName}</td>
                                 <td>${gender}</td>
                                 <td>Company</td>
@@ -261,9 +282,9 @@
                    url: "@Url.Action("GetEmployeesByDepartment", "Home")",
                    data: { id: selectedLevel },
                 success: function (result) {
-                    console.log(result);
+                   
                     $.each(result, function (index, employee) {
-                        console.log(employee);
+                      
                         var employeeName = employee.firstName + " " + employee.lastName;
                         var gender = "";
                         if (employee.gender == 0) {
@@ -285,9 +306,10 @@
                         if (employee.isApprover == true) {
                             $("#EmployeeTableBody").append(
                                 `<tr>
+                                 <td>${employee.id}</td>
                                 <td>${employeeName}</td>
                                 <td>${gender}</td>
-                                <td>Company</td>
+                                <td>Department</td>
                                 <td>${deparmentsStr}</td>
                                 <td>
                                     <div>
@@ -300,9 +322,10 @@
                         else {
                             $("#EmployeeTableBody").append(
                             `<tr>
+                                <td>${employee.id}</td>
                                 <td>${employeeName}</td>
                                 <td>${gender}</td>
-                                <td>Company</td>
+                                <td>Department</td>
                                 <td>${deparmentsStr}</td>
                                 <td>
                                     <div>
@@ -320,4 +343,142 @@
         }
 
     }
+
+
+
+
+    function GetEmployeeLeaveApprovers(Id) {
+         $.ajax({
+                url: "@Url.Action("GetLeaveApproversByEmployee", "Home")",
+                success: function (result) {
+                   
+                    return result;
+             },
+             error: function () { return null; },
+              dataType: "json"
+            });
+    }
+
+
+
+
+
+
+
+
+
+
+    function SaveBtnClicked() {
+        var employeeId = $("#EmployeeId").val();
+        var formData = new FormData();
+        formData.append("EmployeeId", employeeId);
+
+        var rowLength = $("#EmployeeTableBody").children().length;
+        
+        if (rowLength > 0) {
+
+            var leaveApprovers = [];
+
+            var trChildren = $("#EmployeeTableBody").children();
+            $.each(trChildren, function (index, trItem) {
+                var tdCollection = $(trItem).children();
+
+                var LeaveApprover = {
+                    "Id": 0,
+                    "Name": "nsam",
+                    "EmployeeId": 0,
+                    "Department": -1,
+                    "EmployeeRole": 0,
+                    "IsChecked": false
+                };
+
+                if ($("#EmployeeAndDepartmentSelectDropDown").children().length != 0) {
+                    var selectedDepartment = $("#EmployeeAndDepartmentSelectDropDown").val();
+                    LeaveApprover["Department"] = selectedDepartment;
+                    
+                }
+
+                if ($("#LevelSelectDropDown").val() != -1) {
+                    LeaveApprover["EmployeeRole"] = $("#LevelSelectDropDown").val();
+                }
+
+
+                $.each(tdCollection, function (tdCollectionIndex, tdItem) {
+                    if (tdCollectionIndex == 0) {
+                        var _employeeId = $(tdItem).text();
+                        LeaveApprover["EmployeeId"] = _employeeId;
+                    }
+                    if (tdCollectionIndex == 1) {
+                        LeaveApprover["Name"] = $(tdItem).text();
+                    }
+
+                    if (tdCollectionIndex == 5) {
+                        var rr = $(tdItem).children();
+                        var checkElments = $(rr[0]).children();
+                        var checkElement = checkElments[0];
+                        if ($(checkElement).prop("checked") == true) {
+                            LeaveApprover["IsChecked"] = true;
+                        } else {
+                            LeaveApprover["IsChecked"] = false;
+                        }
+                    }
+
+                    //if (tdCollectionIndex == 2) {
+                    //    LeaveApprover["Gender"] = $(tdItem).text();
+                    //}
+
+                });
+
+                leaveApprovers.push(LeaveApprover);
+                
+            });
+
+            //var jsonLeaveApprovers = JSON.stringify(leaveApprovers);
+
+            var ss = {
+                EmployeeId: employeeId,
+                LeaveApprovers: leaveApprovers
+            };
+
+            var rr1 = JSON.stringify(ss);
+
+            //formData.append("LeaveApprovers", jsonLeaveApprovers);
+            //var jsonData = JSON.stringify(formData);
+
+            HitServer(ss);
+           
+        }
+         
+    }
+
+
+    function HitServer(dataF) {
+        console.log(dataF);
+        $.ajax({
+            type: "POST",
+            url: "@Url.Action("SetLeaveApprover", "Home")",
+            data: dataF,
+            processData: true
+            //dataType: "json",
+            //contentType: "application/json"
+            });
+    }
+
+
+    //javaScript Class
+
+
+
+
+    class LeaveApprover {
+        Name;
+        EmployeeId;
+        Department;
+        EmployeeRole;
+    }
+
+    
+
+
+
 </script>
