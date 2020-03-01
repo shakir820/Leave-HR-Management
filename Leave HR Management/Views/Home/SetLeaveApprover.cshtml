@@ -458,7 +458,12 @@
             type: "POST",
             url: "@Url.Action("SetLeaveApprover", "Home")",
             data: dataF,
-            processData: true
+            processData: true,
+            success: function (result) {
+                if (result.isSuccess == true) {
+                    location.replace("@Url.Action("Index", "Home")");
+                }
+            }
             //dataType: "json",
             //contentType: "application/json"
             });

@@ -115,46 +115,75 @@ namespace Leave_HR_Management.Controllers
 
 
         [HttpPost]
-        public  IActionResult SetLeaveApproverAsync(SetEmployeeApproverVM formData)
+        public async Task<IActionResult> SetLeaveApproverAsync(SetEmployeeApproverVM formData)
         {
             if(formData != null)
             {
-               
-                //var leaveApprovers = await db.LeaveApprovers.Where(a => a.EmployeeId == formData.EmployeeId).ToListAsync();
-                //foreach(var item in leaveApprovers)
+                var Employee = await db.Employees.Include(a => a.LeaveApprovers).FirstOrDefaultAsync(a => a.Id == formData.EmployeeId);
+                var employeeLeaveApprovers = Employee.LeaveApprovers;
+                //try
                 //{
-                //    db.LeaveApprovers.Remove(item);
-                //    await db.SaveChangesAsync();
-                //}
-
-                //var employee = await db.Employees.Include(a => a.LeaveApprovers).FirstOrDefaultAsync(a=>a.Id == formData.EmployeeId);
-
-
-
-                //employee.LeaveApprovers.Clear();
-                //await db.SaveChangesAsync();
-
-                //if(formData.LeaveApprovers.Count > 0)
-                //{
-                //    foreach(var item in formData.LeaveApprovers)
+                //    foreach (var item in Employee.LeaveApprovers)
                 //    {
-                //        var leaveApprover = new LeaveApprover();
-                //        leaveApprover.Department = GetDepartment(formData.Department);
-                //        leaveApprover.EmployeeId = item.EmployeeId;
-                //        leaveApprover.EmployeeRole = GetEmployeeRole(formData.EmployeeRole);
-                //        leaveApprover.Name = item.Name;
-                //        db.LeaveApprovers.Add(leaveApprover);
-                //        await db.SaveChangesAsync();
-                //        employee.LeaveApprovers.Add(leaveApprover);
-                //        if(item.EmployeeId == employee.Id)
+                //        var leavApprover = await db.LeaveApprovers.FindAsync(item.Id);
+                //        if (leavApprover != null)
                 //        {
-                //            employee.IsApprover = true;
+                //            db.LeaveApprovers.Remove(leavApprover);
+                //            await db.SaveChangesAsync();
                 //        }
-                //        await db.SaveChangesAsync();
+
                 //    }
                 //}
+                //catch (Exception ex)
+                //{
 
-                //return Json(new { isSuccess = true });
+                //}
+
+
+
+                try
+                {
+                    Employee.LeaveApprovers.Clear();
+                    await db.SaveChangesAsync();
+
+                }
+                catch(Exception ex)
+                {
+
+                }
+
+
+                var newEmployeeApprovers = formData.LeaveApprovers.Where(a => a.IsChecked == true); 
+
+                foreach(var item in newEmployeeApprovers)
+                {
+                    var approver = new LeaveApprover();
+                    if(item.Department > 0)
+                    {
+                        approver.Department = (DepartmentCatagory)Enum.Parse(typeof(DepartmentCatagory), item.Department.ToString());
+                    }
+                    approver.EmployeeId = item.EmployeeId;
+                    if(item.EmployeeRole == 0)
+                    {
+                        approver.EmployeeRole = EmployeeRole.Company;
+                    }
+                    if (item.EmployeeRole == 1)
+                    {
+                        approver.EmployeeRole = EmployeeRole.Department;
+                    }
+                    if (item.EmployeeRole == 2)
+                    {
+                        approver.EmployeeRole = EmployeeRole.Employee;
+                    }
+                    approver.Name = item.Name;
+                    db.LeaveApprovers.Add(approver);
+                    await db.SaveChangesAsync();
+                    Employee.LeaveApprovers.Add(approver);
+                    await db.SaveChangesAsync();
+                }
+
+
+                return Json(new { isSuccess = true });
             }
             return Json(new { isSuccess = false });
         }

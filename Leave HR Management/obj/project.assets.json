@@ -7084,23 +7084,25 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\SHAKIR\\.nuget\\packages\\": {},
-    "C:\\Microsoft\\Xamarin\\NuGet\\": {}
+    "C:\\Users\\intern02\\.nuget\\packages\\": {},
+    "C:\\Microsoft\\Xamarin\\NuGet\\": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\Github\\Leave-HR-Management\\Leave HR Management\\Leave HR Management.csproj",
+      "projectUniqueName": "D:\\GitHub\\Leave-HR-Management\\Leave HR Management\\Leave HR Management.csproj",
       "projectName": "Leave HR Management",
-      "projectPath": "E:\\Github\\Leave-HR-Management\\Leave HR Management\\Leave HR Management.csproj",
-      "packagesPath": "C:\\Users\\SHAKIR\\.nuget\\packages\\",
-      "outputPath": "E:\\Github\\Leave-HR-Management\\Leave HR Management\\obj\\",
+      "projectPath": "D:\\GitHub\\Leave-HR-Management\\Leave HR Management\\Leave HR Management.csproj",
+      "packagesPath": "C:\\Users\\intern02\\.nuget\\packages\\",
+      "outputPath": "D:\\GitHub\\Leave-HR-Management\\Leave HR Management\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Microsoft\\Xamarin\\NuGet\\"
+        "C:\\Microsoft\\Xamarin\\NuGet\\",
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\SHAKIR\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\intern02\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
@@ -7162,7 +7164,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.102\\RuntimeIdentifierGraph.json"
       }
     }
   }
