@@ -66,9 +66,15 @@
                             @{ string approversStr = "";}
                             @if (employee.LeaveApprovers.Count > 0)
                             {
+                                var j = 0;
                                 foreach (var approver in employee.LeaveApprovers)
                                 {
-                                    approversStr += ", " + approver.Name;
+                                    if (j != 0)
+                                    {
+                                        approversStr += ", ";
+                                    }
+                                    approversStr += approver.Name;
+                                    j++;
                                 }
                                 <p class="text-wrap">@approversStr</p>
                             }
